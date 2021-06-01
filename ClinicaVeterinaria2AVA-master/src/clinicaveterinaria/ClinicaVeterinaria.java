@@ -176,7 +176,7 @@ public class ClinicaVeterinaria {
 		            System.err.println(EXCEPCIONENTERO);
 		            return;
 		        }
-		        m1 = new Cosita(ID, nombre, edad, raza, p2, gradosalvaje);
+		        m1 = new Gato(ID, nombre, edad, raza, p2, gradosalvaje);
 		        break;
 		    default:
 		        m1 = new Mascota(ID, nombre, edad, raza, p2);
@@ -200,10 +200,11 @@ public class ClinicaVeterinaria {
 		    edad = Integer.parseInt(teclado.readLine());
 		} catch (Exception e) {
 		    System.err.println(EXCEPCIONENTERO);
-		    return;
+		    return -1;
 		}
 		Persona p1 = new Persona(nombre, apellidos, dni, edad);
 		clientes.add(p1);
+		return 1;
 	}
 
 	private static void muestraMenu() {
