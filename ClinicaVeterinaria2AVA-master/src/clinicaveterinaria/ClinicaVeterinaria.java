@@ -62,7 +62,7 @@ public class ClinicaVeterinaria {
 			switch (numero) {
                 case 1:
                     //CLIENTE NUEVO
-				altaCliente(teclado, clientes, EXCEPCIONENTERO, nomCliente);
+				altaCliente(teclado, clientes, EXCEPCIONENTERO, nomCliente, PRUEBA);
                     break;
 
                 case 2:
@@ -185,8 +185,8 @@ public class ClinicaVeterinaria {
 		listaMascotas.add(m1);
 	}
 
-	private static void altaCliente(BufferedReader teclado, ArrayList<Persona> clientes, final String EXCEPCIONENTERO,
-			String nomCliente) throws IOException {
+	private static int altaCliente(BufferedReader teclado, ArrayList<Persona> clientes, final String EXCEPCIONENTERO,
+			String nomCliente, String parametro) throws IOException {
 		System.out.println("INTRODUCIMOS EL CLIENTE");
 		System.out.println(nomCliente);
 		String nombre = teclado.readLine();
